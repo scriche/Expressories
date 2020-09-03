@@ -1,0 +1,4 @@
+displayName = Expressories
+author = scrich
+version = 0.1
+modReferences = CalamityMod
