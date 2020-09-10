@@ -23,11 +23,6 @@ namespace Expressories.Items.Accessories
 			player.GetModPlayer<exPlayer>().rustyknifebool = true;
 		}
 
-		public override int ChoosePrefix(UnifiedRandom rand) {
-			// When the item is given a prefix, only roll the best modifiers for accessories
-			return rand.Next(new int[] { PrefixID.Arcane, PrefixID.Lucky, PrefixID.Menacing, PrefixID.Quick, PrefixID.Violent, PrefixID.Warding });
-		}
-
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			//recipe.AddIngredient(ItemID.LifeCrystal, 2);
