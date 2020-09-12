@@ -8,7 +8,7 @@ namespace Expressories.Items.Accessories
 	public class rustyblade : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Rogue projectiles deal stacking damage overtime (max 10)");
+			Tooltip.SetDefault("Rogue projectiles deal stacking damage overtime (max 10)\n15% increased rogue velocity");
 		}
 
 		public override void SetDefaults() {
@@ -21,6 +21,7 @@ namespace Expressories.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual) {
 			player.GetModPlayer<exPlayer>().rustyknifebool = true;
+			player.thrownVelocity += 0.15f;
 		}
 
 		public override void AddRecipes() {

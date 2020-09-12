@@ -13,20 +13,26 @@ namespace Expressories.NPCs
 		public override bool InstancePerEntity => true;
 		
 		public bool Tetnis;
+		public int rustycount = 0;
 
 		public override void ResetEffects(NPC npc) {
 			Tetnis = false;
 		}
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage) {
-			if (Tetnis) {
+			if (Tetnis)
+			{
 				if (npc.lifeRegen > 0) {
 					npc.lifeRegen = 0;
 				}
-				
-				npc.lifeRegen -= playr.rustycount;
-                damage = playr.rustycount;
-                }
+
+				//npc.lifeRegen -= playr.rustycount;
+				npc.lifeRegen -= rustycount * 3;
+				damage = rustycount;
+
+            } else {
+				rustycount = 0;
+			}
 
 			/**if (eFlames) {
 				if (npc.lifeRegen > 0) {

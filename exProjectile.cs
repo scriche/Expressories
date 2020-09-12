@@ -38,9 +38,11 @@ namespace Expressories
 			if (calamityProj.rogue && player.GetModPlayer<exPlayer>().rustyknifebool && !proj.noEnchantments)
 			{
 				
-				target.AddBuff(BuffType<Buffs.Tetnis>(), 300);
-                player.GetModPlayer<exPlayer>().rustycount += 1;
-				//rust.rustycount += 1;
+				target.AddBuff(BuffType<Buffs.Tetnis>(), 125);
+				if (target.GetGlobalNPC<exGlobalNPC>().rustycount < 10)
+				{
+                	target.GetGlobalNPC<exGlobalNPC>().rustycount += 1;
+				}//rust.rustycount += 1;
 			}
 		}
 		public override void ModifyHitNPC(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)

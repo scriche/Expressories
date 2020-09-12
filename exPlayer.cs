@@ -23,7 +23,6 @@ namespace Expressories
 	{
 
 		public bool rustyknifebool = false;
-		public int rustycount = 0;
 		public bool barbed = false;
 
 		public static exPlayer ModPlayer(Player player)
