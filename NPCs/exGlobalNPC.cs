@@ -9,7 +9,7 @@ namespace Expressories.NPCs
 {
 	public class exGlobalNPC : GlobalNPC
 	{
-		exPlayer rust = new exPlayer(); 
+		exPlayer playr = new exPlayer(); 
 		public override bool InstancePerEntity => true;
 		
 		public bool Tetnis;
@@ -24,8 +24,8 @@ namespace Expressories.NPCs
 					npc.lifeRegen = 0;
 				}
 				
-				npc.lifeRegen -= rust.rustycount;
-                damage = rust.rustycount;
+				npc.lifeRegen -= playr.rustycount;
+                damage = playr.rustycount;
                 }
 
 			/**if (eFlames) {

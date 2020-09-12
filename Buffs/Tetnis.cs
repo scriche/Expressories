@@ -4,6 +4,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Expressories.NPCs;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace Expressories.Buffs
 {
@@ -12,10 +18,10 @@ namespace Expressories.Buffs
 		public override void SetDefaults() {
 			DisplayName.SetDefault("Tetnis");
 			Description.SetDefault("Welp");
-			Main.debuff[Type] = true;
+			/**Main.debuff[Type] = true;
 			Main.pvpBuff[Type] = true;
 			Main.buffNoSave[Type] = true;
-			longerExpertDebuff = true;
+			longerExpertDebuff = true;**/
 		}
 
 		public override void Update(NPC npc, ref int buffIndex) {

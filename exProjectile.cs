@@ -33,15 +33,33 @@ namespace Expressories
 		{
             
 			Player player = Main.player[proj.owner];
-            var calamityProj = ((Projectile) proj).Calamity();
+            var calamityProj = proj.Calamity();
 
 			if (calamityProj.rogue && player.GetModPlayer<exPlayer>().rustyknifebool && !proj.noEnchantments)
 			{
+				
 				target.AddBuff(BuffType<Buffs.Tetnis>(), 300);
                 player.GetModPlayer<exPlayer>().rustycount += 1;
 				//rust.rustycount += 1;
 			}
 		}
+		public override void ModifyHitNPC(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+		{
+
+			Player player = Main.player[proj.owner];
+            var calamityProj = proj.Calamity();
+
+			
+			if (calamityProj.rogue && player.GetModPlayer<exPlayer>().barbed)
+			{
+				if (crit)
+				{
+					damage = (int)((double)damage * 1.5);
+				}
+			}
+			
+		}
+		
 	
 	}
 

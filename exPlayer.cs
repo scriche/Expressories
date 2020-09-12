@@ -22,17 +22,19 @@ namespace Expressories
 	public class exPlayer : ModPlayer
 	{
 
-		public bool rustyknifebool;
-		public int rustycount;
+		public bool rustyknifebool = false;
+		public int rustycount = 0;
+		public bool barbed = false;
 
 		public static exPlayer ModPlayer(Player player)
         {
             return player.GetModPlayer<exPlayer>();
         }
 
-		public override void Initialize()
+		public override void ResetEffects()
 		{
 			rustyknifebool = false;
+			barbed = false;
 		}
 		
 	}
