@@ -22,7 +22,7 @@ namespace Expressories.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual) {
 			//player.GetModPlayer<exPlayer>().barbed = true;
-			if (player.velocity.X > 0.2f && player.velocity.Y > 0.2f)
+			if (player.velocity.X > 0.0f && player.velocity.Y > 0.0f)
 			{
 				player.thrownDamage += 0.08f;
 			}
