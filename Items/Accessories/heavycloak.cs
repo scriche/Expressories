@@ -14,6 +14,7 @@ namespace Expressories.Items.Accessories
 	public class heavycloak : ModItem
 	{
 		public override void SetStaticDefaults() {
+			DisplayName.SetDefault("Heavy Cloak");
 			Tooltip.SetDefault("Increase the stealth genereation by 50%\nreduce movement speed by 25%");
 		}
 

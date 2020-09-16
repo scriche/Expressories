@@ -34,6 +34,7 @@ namespace Expressories
             
 			Player player = Main.player[proj.owner];
             var calamityProj = proj.Calamity();
+			var calamityPlayer = player.Calamity();
 
 			if (calamityProj.rogue && player.GetModPlayer<exPlayer>().rustyknifebool && !proj.noEnchantments)
 			{
@@ -43,6 +44,20 @@ namespace Expressories
 				{
                 	target.GetGlobalNPC<exGlobalNPC>().rustycount += 1;
 				}//rust.rustycount += 1;
+			}
+
+			if (calamityProj.rogue && player.GetModPlayer<exPlayer>().bloody)
+			{
+				if (crit)
+				{
+					
+					float totalcrit = (player.thrownCrit)+(calamityPlayer.throwingCrit);
+					float idk = totalcrit / 100;
+					int currentcrit = (int)((float)damage / idk);
+					int letssee = currentcrit / 30;
+					player.statLife += letssee;
+					player.HealEffect(letssee); /// (player.thrownCrit)+(calamityPlayer.throwingCrit));
+				}
 			}
 		}
 		public override void ModifyHitNPC(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)

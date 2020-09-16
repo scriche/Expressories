@@ -5,24 +5,23 @@ using Terraria.Utilities;
 
 namespace Expressories.Items.Accessories
 {
-	public class rustyblade : ModItem
+	public class luckypenny : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Rusty Knife");
-			Tooltip.SetDefault("Rogue projectiles deal stacking damage overtime (max 10)\n15% increased rogue velocity");
+			DisplayName.SetDefault("Lucky Penny");
+			Tooltip.SetDefault("Allways good to have one in your pocket\nIncreased rogue crit chance by 18%");
 		}
 
 		public override void SetDefaults() {
 			item.width = 32;
 			item.height = 32;
 			item.accessory = true;
-			item.value = Item.sellPrice(gold: 3);
-			item.rare = ItemRarityID.Yellow;
+			item.value = Item.sellPrice(platinum: 1);
+			item.rare = 4;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual) {
-			player.GetModPlayer<exPlayer>().rustyknifebool = true;
-			player.thrownVelocity += 0.15f;
+			player.thrownCrit += 18;
 		}
 
 		public override void AddRecipes() {

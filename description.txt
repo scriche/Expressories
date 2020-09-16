@@ -1,7 +1,13 @@
-Expressories is a Calamity Mod addtions mod aiming to add more to the rogue class
+Expressories is a Calamity addtions mod aiming to add more to the rogue class
 
 Currenly in game
- 1 Accessorie
 
-The aim of thism od is to add more variety and choice in the rogue class with the
-current Rogue feeling set on a certain path and dosent get more choice in Assesories and armor
+- 9 Rogue class based Accessories
+
+The aim of this mod is to add more variety and choice in the rogue class with the
+current Rogue feeling set on a certain path and dosent get more choice in Accessories and armor
+
+plus there are not that many many mod that add to calamity rogue class
+
+Dont worry there are lots more Accessories and a few armor sets to come this is the first interation of this mod
+

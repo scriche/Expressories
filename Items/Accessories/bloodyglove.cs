@@ -2,26 +2,35 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
+using CalamityMod;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.World;
 
 namespace Expressories.Items.Accessories
 {
-	public class barbedbracelet : ModItem
+	public class bloodyglove : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Barbed Bracelet");
-			Tooltip.SetDefault("Rogue projectile critical hits do x3 damage");
+			DisplayName.SetDefault("Bloody Glove");
+			Tooltip.SetDefault("Decreases rogue damage by 30%\nRogue weapon critical hit now heal for a small percent of damage delt");
 		}
 
 		public override void SetDefaults() {
-			item.width = 32;
-			item.height = 20;
+			item.width = 22;
+			item.height = 28;
 			item.accessory = true;
 			item.value = Item.sellPrice(platinum: 1);
-			item.rare = ItemRarityID.Lime;
+			item.rare = ItemRarityID.Red;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual) {
-			player.GetModPlayer<exPlayer>().barbed = true;
+			player.GetModPlayer<exPlayer>().bloody = true;
+			player.thrownDamage -= 0.30f;
+			var calamityPlayer = player.Calamity();
+			Mod otherMod = ModLoader.GetMod("CalamityMod");
 		}
 
 		public override void AddRecipes() {

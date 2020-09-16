@@ -8,7 +8,8 @@ namespace Expressories.Items.Accessories
 	public class bigmac : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Emir is with you\nGain +50 hp");
+			DisplayName.SetDefault("Big Mac");
+			Tooltip.SetDefault("Emir is with you\n+50 hp");
 		}
 
 		public override void SetDefaults() {

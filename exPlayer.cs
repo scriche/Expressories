@@ -21,7 +21,7 @@ namespace Expressories
 {
 	public class exPlayer : ModPlayer
 	{
-
+		public bool bloody = false;
 		public bool rustyknifebool = false;
 		public bool barbed = false;
 
@@ -34,6 +34,7 @@ namespace Expressories
 		{
 			rustyknifebool = false;
 			barbed = false;
+			bloody = false;
 		}
 		
 	}
