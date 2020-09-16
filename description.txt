@@ -1,25 +1,28 @@
-Expressories is a Calamity addtions mod aiming to add more to the rogue class
+Expressories is a Calamity additions mod aiming to add more to the rogue class
 
-Currenly in game
-
-- 9 Rogue class based Accessories
+- 8 Rogue class-based Accessories
 
 The aim of this mod is to add more variety and choice in the rogue class with the
-current Rogue feeling set on a certain path and dosent get more choice in Accessories and armor
+current Rogue feeling set on a certain path and doesn't get more choice in Accessories and armor
 
-plus there are not that many many mod that add to calamity rogue class
+plus there are not that  many mods that adds to calamity rogue class
 
-Dont worry there are lots more Accessories and a few armor sets to come this is the first interation of this mod
+Don't worry there are lots more Accessories and a few armor sets to come this is the first iteration of this mod
 
 ALL ITEMS DONT HAVE RECIPES YET
+I am having trouble making up recipes and where to put these items in the game so i have yet to implement this
+this is my first mod I've made soo there are a lot of mistakes I will make, most of the sprites in the game are just reskins of Terraira sprites since i am not a good pixel artist
+if you have any suggestion or thing I could improve I would  LOVE to hear them whether it be criticism or complements
 
 Change log
 
 v0.1
-
 Initial Release
 
 v0.2
-
 Added Icon
 
+v0.3
+Added Yharon's Talon
+Fixed Static socks name
+Added homepage

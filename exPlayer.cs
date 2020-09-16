@@ -24,17 +24,28 @@ namespace Expressories
 		public bool bloody = false;
 		public bool rustyknifebool = false;
 		public bool barbed = false;
+		public bool socked = false;
+		public bool ywrath = false;
 
 		public static exPlayer ModPlayer(Player player)
         {
             return player.GetModPlayer<exPlayer>();
         }
 
+		public override void PreUpdateMovement ()
+		{
+			if (socked)
+				{
+					player.thrownDamage += 0.08f;
+				}
+		}
 		public override void ResetEffects()
 		{
 			rustyknifebool = false;
 			barbed = false;
 			bloody = false;
+			socked = false;
+			ywrath = false;
 		}
 		
 	}

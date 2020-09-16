@@ -5,10 +5,10 @@ using Terraria.Utilities;
 
 namespace Expressories.Items.Accessories
 {
-	public class sock : ModItem
+	public class staticsock : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Sock");
+			DisplayName.SetDefault("Static Sock");
 			Tooltip.SetDefault("They look used\nGain increased rogue damage by 8% when moving");
 		}
 
@@ -21,11 +21,7 @@ namespace Expressories.Items.Accessories
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual) {
-			//player.GetModPlayer<exPlayer>().barbed = true;
-			if (player.velocity.X > 0.0f && player.velocity.Y > 0.0f)
-			{
-				player.thrownDamage += 0.08f;
-			}
+			player.GetModPlayer<exPlayer>().socked = true;
 		}
 
 		public override void AddRecipes() {

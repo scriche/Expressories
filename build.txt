@@ -1,4 +1,5 @@
 displayName = Expressories
+homepage = https://forums.terraria.org/index.php?threads/expressories.97970/
 author = scrich
-version = 0.2
+version = 0.2.1
 modReferences = CalamityMod

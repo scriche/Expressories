@@ -14,9 +14,11 @@ namespace Expressories.NPCs
 		
 		public bool Tetnis;
 		public int rustycount = 0;
+		public bool yharonswrath;
 
 		public override void ResetEffects(NPC npc) {
 			Tetnis = false;
+			yharonswrath = false;
 		}
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage) {
@@ -32,6 +34,15 @@ namespace Expressories.NPCs
 
             } else {
 				rustycount = 0;
+			}
+
+			if (yharonswrath)
+			{
+				if (npc.lifeRegen > 0) {
+					npc.lifeRegen = 0;
+				}
+				npc.lifeRegen -= 200;
+				damage = 1;
 			}
 
 			/**if (eFlames) {

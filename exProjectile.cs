@@ -46,6 +46,12 @@ namespace Expressories
 				}//rust.rustycount += 1;
 			}
 
+			if (calamityProj.rogue && player.GetModPlayer<exPlayer>().ywrath && !proj.noEnchantments)
+			{
+				
+				target.AddBuff(BuffType<Buffs.yharonwrath>(), 50);
+			}
+
 			if (calamityProj.rogue && player.GetModPlayer<exPlayer>().bloody)
 			{
 				if (crit)
