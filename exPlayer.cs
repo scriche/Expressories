@@ -36,6 +36,7 @@ namespace Expressories
 		{
 			if (socked)
 				{
+					if (player.velocity.X > 0 || player.velocity.Y > 0)
 					player.thrownDamage += 0.08f;
 				}
 		}

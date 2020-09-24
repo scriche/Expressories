@@ -35,9 +35,12 @@ namespace Expressories.Items.Accessories
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			//recipe.AddIngredient(ItemID.LifeCrystal, 2);
-			//recipe.AddIngredient(ItemID.ManaCrystal, 2);
-			//recipe.AddTile(TileID.Anvils);
+			Mod calamityMod = ModLoader.GetMod("CalamityMod");
+			recipe.AddIngredient(ItemID.MechanicalGlove, 1);
+			recipe.AddIngredient(ItemID.Leather, 10);
+			recipe.AddIngredient(calamityMod.ItemType("BloodstainedGlove"), 1);
+			recipe.AddIngredient(calamityMod.ItemType("Bloodstone"), 5);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -56,7 +56,8 @@ namespace Expressories
 			{
 				if (crit)
 				{
-					
+
+					//Bruh idk im to tired to fix this	
 					float totalcrit = (player.thrownCrit)+(calamityPlayer.throwingCrit);
 					float idk = totalcrit / 100;
 					int currentcrit = (int)((float)damage / idk);

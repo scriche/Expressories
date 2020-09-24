@@ -9,8 +9,8 @@ plus there are not that  many mods that adds to calamity rogue class
 
 Don't worry there are lots more Accessories and a few armor sets to come this is the first iteration of this mod
 
-ALL ITEMS DONT HAVE RECIPES YET
-I am having trouble making up recipes and where to put these items in the game so i have yet to implement this
+ALL ITEMS HAVE RECIPES / DROPS NOW
+I am having trouble making up recipes and where to put these items in the game so if you haev suggestion for what to make the items with / what to drop from
 this is my first mod I've made soo there are a lot of mistakes I will make, most of the sprites in the game are just reskins of Terraira sprites since i am not a good pixel artist
 if you have any suggestion or thing I could improve I would  LOVE to hear them whether it be criticism or complements
 
@@ -22,7 +22,11 @@ Initial Release
 v0.2
 Added Icon
 
-v0.3
+v0.2.1
 Added Yharon's Talon
 Fixed Static socks name
 Added homepage
+
+v0.2.2
+Fixed Static Sock not adding damage correctly
+Added recipes and drops to every item

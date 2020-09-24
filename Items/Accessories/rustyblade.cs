@@ -30,8 +30,8 @@ namespace Expressories.Items.Accessories
 			//recipe.AddIngredient(ItemID.LifeCrystal, 2);
 			//recipe.AddIngredient(ItemID.ManaCrystal, 2);
 			//recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			//recipe.SetResult(this);
+			//recipe.AddRecipe();
 		}
 	}
 }

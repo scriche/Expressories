@@ -28,7 +28,7 @@ namespace Expressories.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual) {
 			//player.GetModPlayer<exPlayer>().barbed = true;
-			player.moveSpeed -= 0.25f;//(player.moveSpeed * 0.25f);
+			player.runAcceleration -= 0.25f;//(player.moveSpeed * 0.25f);
 			var calamityPlayer = player.Calamity();
 			Mod otherMod = ModLoader.GetMod("CalamityMod");
 			calamityPlayer.stealthAcceleration += 1f;
@@ -36,9 +36,11 @@ namespace Expressories.Items.Accessories
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			//recipe.AddIngredient(ItemID.LifeCrystal, 2);
-			//recipe.AddIngredient(ItemID.ManaCrystal, 2);
-			//recipe.AddTile(TileID.Anvils);
+			Mod calamityMod = ModLoader.GetMod("CalamityMod");
+			recipe.AddIngredient(ItemID.LeadBar, 30);
+			recipe.AddIngredient(calamityMod.ItemType("SilencingSheath"), 1);
+			recipe.AddIngredient(calamityMod.ItemType("SandCloak"), 1);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
